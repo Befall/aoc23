@@ -27,8 +27,6 @@ with open("input.txt", "r") as r:
 
         # Sort them by index found, grab the first/last, and add em
         matches = sorted(matches, key=lambda x: x[0])
-        if len(matches) > 2:
-            matches = matches[:1] + matches[len(matches)-1:]
         total += int(matches[0][1] + matches[-1][1])
 
 print(total)
