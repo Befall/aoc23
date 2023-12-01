@@ -16,6 +16,7 @@ with open("input.txt", "r") as r:
             "nine": 9,
         }
 
+        # Find all matches, both text and digit
         matches = []
         for s, d in digit_text_to_int.items():
             found = [m.span()[0] for m in re.finditer(s, line)]
@@ -23,6 +24,8 @@ with open("input.txt", "r") as r:
             if found:
                 for f in found:
                     matches.append((f, str(d)))
+
+        # Sort them by index found, grab the first/last, and add em
         matches = sorted(matches, key=lambda x: x[0])
         if len(matches) > 2:
             matches = matches[:1] + matches[len(matches)-1:]
