@@ -1,7 +1,6 @@
 DIGITS = "0123456789"
 SYMBOLS = "!@#$%^&*()_+-={}[]/?><\"':;"
 
-# Get all numbers and their row/col coords (ie, in the example, 467 would have [(0,0), (0,1), (0,2)])
 def get_number_coords(input_file):
     with open(input_file, "r") as read_file:
         row = -1
