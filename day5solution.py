@@ -102,6 +102,7 @@ def get_map_range(source_range, map_ranges):
     return transposed
 
 def get_map_ranges(raw_map, source_ranges):
+    # Part 2
     map_ranges = {}
     for destination, source, rng in raw_map:
         map_ranges[(source, source + rng - 1)] = destination - source
